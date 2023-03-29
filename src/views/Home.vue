@@ -65,7 +65,9 @@
                       <img style="width: auto;height: 20px" alt="Image placeholder" :src=engine.img>
                     </b-dropdown-item>
                   </b-dropdown>
-                  <base-button @click="searchContent">搜索</base-button>
+                  <base-button style="padding-left: 12px; padding-right: 12px"  @click="searchContent">
+                    <i class="fa fa-search"></i>
+                  </base-button>
                 </template>
               </b-input-group>
             </b-col>
@@ -75,8 +77,8 @@
           <b-row>
             <b-col></b-col>
             <b-col lg="12">
-              <div class="mt-5" style="text-align: left; margin-left: 10px">
-                <div class="typing-text text-white" style="font-size: medium">
+              <div class="mt-5" style="text-align: left; margin-left: 20px;">
+                <div class="typing-text text-white" style="font-size: medium; white-space: pre-wrap;">
                   <span v-for="(char, index) in displayText" :key="index">{{ char }}</span>
                 </div>
               </div>
@@ -112,13 +114,13 @@
             <card style="flex-basis: 100%; max-width: 100%;">
               <!-- Card body -->
               <b-row align-v="center">
-                <b-col md="4">
+                <b-col class="col-4">
                   <!-- Avatar -->
                   <a :href="site.url" class="avatar avatar-xl" target="_blank">
                     <img :style="{ transform: `scale(${site.scale})` }" alt="Image placeholder" :src=site.avatar>
                   </a>
                 </b-col>
-                <b-col class="ml--2" md="8">
+                <b-col class="ml--2 col-8">
                   <h4 class="mb-0" style="font-weight: bolder">
                     <a :href="site.url" target="_blank">{{ site.name }}</a>
                   </h4>
@@ -148,13 +150,13 @@
               <card style="flex-basis: 100%; max-width: 100%;">
                 <!-- Card body -->
                 <b-row align-v="center">
-                  <b-col md="4">
+                  <b-col col-8>
                     <!-- Avatar -->
                     <a style="width: 48px;height: 48px" :href="site.url" target="_blank" class="avatar avatar-xl">
                       <img :style="{ transform: `scale(${site.scale})` }" alt="Image placeholder" :src=site.avatar>
                     </a>
                   </b-col>
-                  <b-col class="ml--2" md="8">
+                  <b-col class="ml--2 col-8">
                     <h4 class="mb-0" style="font-weight: bold">
                       <a class="card-text" target="_blank" :href="site.url">{{ site.name }}</a>
                     </h4>
