@@ -237,8 +237,8 @@ export default {
         {id: 'google', img: "img/icons/google-2015.svg", scale: 1.0, label: "谷歌", url: 'https://www.google.com/search?q='},
         {id: 'bing', img: "img/icons/bing-11.svg", scale: 1.0, label: "必应", url: 'https://www.bing.com/search?q='},
         {id: 'baidu', img: "img/icons/baidu.svg", scale: 1.0, label: "百度", url: 'https://www.baidu.com/s?wd='},
-        {id: 'duckduckgo', img: "img/icons/duckduckgo-2.svg", scale: 1.0, label: "duckduckgo", url: 'https://www.duckduckgo.com/s?wd='},
-      //   {id: 'github', img: "img/icons/github-2.svg", scale: 1.0, label: "github", url: 'https://www.duckduckgo.com/s?wd='},
+        {id: 'duckduckgo', img: "img/icons/duckduckgo-2.svg", scale: 1.0, label: "duckduckgo", url: 'https://duckduckgo.com/?q='},
+        {id: 'github', img: "img/icons/github.png", scale: 1.0, label: "github", url: 'https://github.com/search?q='},
        ],
       selectedEngine: {
         id: 'google',
