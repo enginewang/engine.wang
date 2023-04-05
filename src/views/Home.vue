@@ -271,7 +271,7 @@ export default {
         {
           "name": "Stable Diffusion",
           "desc": "自部署的Diffusion Ai Web，图片生成",
-          "isActive": false,
+          "isActive": true,
           "avatar": "img/icons/diffusion.png",
           "url": "https://diffusion.engine.wang",
           "urlStr": "diffusion.engine.wang",
@@ -385,7 +385,7 @@ export default {
         },
 
         "CodingSites": {
-          "label": "程序员常用站",
+          "label": "我的常用站",
           "siteList": [
             {
               "name": "极客时间",
@@ -423,14 +423,23 @@ export default {
               "urlStr": "programmercarl.com",
               "scale": 1
             },
+            // {
+            //   "name": "Labuladong算法小抄",
+            //   "desc": "算法笔记",
+            //   "isActive": true,
+            //   "avatar": "img/icons/labuladong.jpg",
+            //   "url": "https://labuladong.github.io/algo/",
+            //   "urlStr": "labuladong.github.io/algo",
+            //   "scale": 1
+            // },
             {
-              "name": "Labuladong算法小抄",
-              "desc": "算法笔记",
+              "name": "人人都是产品经理",
+              "desc": "产品经理",
               "isActive": true,
-              "avatar": "img/icons/labuladong.jpg",
-              "url": "https://labuladong.github.io/algo/",
-              "urlStr": "labuladong.github.io/algo",
-              "scale": 1
+              "avatar": "img/icons/iampm.jpeg",
+              "url": "https://www.woshipm.com/",
+              "urlStr": "woshipm.com",
+              "scale": 0.8
             },
             {
               "name": "小林Coding",
@@ -687,8 +696,18 @@ export default {
     },
   },
   mounted() {
+    if (!localStorage.getItem('visited') || localStorage.getItem('visited')!=="diffusion") {
+      // 存储一个名为"visited"的标记到本地存储
+      localStorage.setItem('visited', 'diffusion');
+      this.$notify({
+        type: 'success',
+        title: 'Stable Diffusion AI已上线！',
+        message: "https://difussion.engine.wang，快来体验Ai生成图像的乐趣吧~",
+        timeout: 5000,
+      });
+    }
     // var text = this.quote[Math.floor(Math.random() * this.quote.length)];
-    axios.get('https://v1.hitokoto.cn')
+    axios.get('https://v1.hitokoto.cn/?c=d&c=i&c=j&c=k')
         .then(response => {
           var text = response.data.hitokoto;
           if (response.data.from_who) {
